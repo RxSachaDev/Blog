@@ -5,7 +5,7 @@ function updateChar(){
     if (input) {
         input.addEventListener("input", () => {
             if (input.value.length > 100) {
-                input.value = input.value.substring(0, 100); // Limiter à 400 caractères
+                input.value = input.value.substring(0, 100); // Limiter à 100 caractères
             }
             char.innerHTML = input.value.length + ' / 100 caractères' 
         })

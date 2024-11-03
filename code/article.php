@@ -62,7 +62,7 @@ if (count($parts) === 1) {
 
         $stmt = getCategoryWithIdCategory($idCategory);
         $nameCategory = $stmt ? $stmt->fetch(PDO::FETCH_ASSOC) : null;
-        $name = $nameCategory ? $nameCategory['name_cat'] : 'Catégorie non définie';
+        $name = ucfirst(htmlspecialchars($category_slug));
 
         $commentaires = getCommentByArticle($article['id_article']);
         $initialCount = 2;
